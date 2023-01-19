@@ -78,7 +78,7 @@ func (t LocalTime) String() string {
 const (
 	UserName     string = "root"
 	Password     string = "123456"
-	Addr         string = "ginorm_mysql_1"
+	Addr         string = "ginorm-mysql-1"
 	Port         int    = 3306
 	Database     string = "test"
 	MaxLifetime  int    = 10

@@ -2,11 +2,16 @@ version: "3.9"
 services:
   golang:
     build: .
-    tty: true
+    depends_on:
+      - mysql
+      - redis
     volumes:
       - ./code:/code
+    working_dir: /code
+    tty: true
     ports:
       - "8080:8000"
+      - "3000:3000"
   mysql:
     platform: 'linux/x86_64'
     image: mysql
